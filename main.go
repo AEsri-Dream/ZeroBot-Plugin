@@ -38,6 +38,8 @@ import (
 
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/atri" // ATRI词库
 
+	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/al1s" // AL1S词库
+
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/manager" // 群管
 
 	_ "github.com/FloatTech/zbputils/job" // 定时指令触发器
