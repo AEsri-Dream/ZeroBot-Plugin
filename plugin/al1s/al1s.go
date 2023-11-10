@@ -70,27 +70,27 @@ func init() { // 插件主体
 		})
 	engine.OnFullMatchGroup([]string{"喜欢", "爱你", "爱", "suki", "daisuki", "すき", "好き"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("X1.png", "X2.png", "X3.png"))
+			ctx.SendChain(dgtr.randImage("X1.jpg", "X2.jpg", "X3.jpg"))
 		})
 	engine.OnFullMatchGroup([]string{"讨厌", "讨厌你", "不爱了", "没爱了", "不喜欢你了", "不喜欢", "一边去", "谁问你了", "这机器人好烦", "你好烦"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("K1.png", "K2.png", "K3.png", "K4.png"))
+			ctx.SendChain(dgtr.randImage("K1.jpg", "K2.jpg", "K3.jpg", "K4.jpg"))
 		})
 	engine.OnFullMatchGroup([]string{"透透", "透透老婆", "开银趴", "炼铜", "萝莉控", "变态", "Hentai", "hentai"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("BY1.png", "BY2.png", "HY1.png", "HY2.png", "HY3.png"))
+			ctx.SendChain(dgtr.randImage("BY1.jpg", "BY2.jpg", "HY1.jpg", "HY2.jpg", "HY3.jpg"))
 		})
 	engine.OnFullMatchGroup([]string{"贴贴", "老婆", "我爱你", "摸摸", "亲一个", "mua"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("X3.png"))
+			ctx.SendChain(dgtr.randImage("X3.jpg"))
 		})
 	engine.OnFullMatchGroup([]string{"骂我", "狠狠骂我", "tister!", "tister！", "Tister!", "Tister！"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("HY2.png", "HY3.png"))
+			ctx.SendChain(dgtr.randImage("HY2.jpg", "HY3.jpg"))
 		})
-	engine.OnKeywordGroup([]string{"啊米诺斯", "草你妈", "曹尼玛", "神经病", "操你妈", "脑瘫", "废柴", "fw", "kkp", "five", "废物", "战斗", "爬", "爪巴", "sb", "SB", "滚", "傻B"}, zero.OnlyToMe).SetBlock(true).
+	engine.OnKeywordGroup([]string{"啊米诺斯", "草你妈", "曹尼玛", "神经病", "操你妈", "脑瘫", "弱智", "废柴", "fw", "kkp", "five", "废物", "战斗", "爬", "爪巴", "sb", "SB", "滚", "傻B"}, zero.OnlyToMe).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
-			ctx.SendChain(dgtr.randImage("KB1.png", "KB2.png", "KB3.png", "N1.png", "N2.png", "N3.png"))
+			ctx.SendChain(dgtr.randImage("KB1.jpg", "KB2.jpg", "KB3.jpg", "N1.jpg", "N2.jpg", "N3.jpg"))
 		})
 	engine.OnFullMatchGroup([]string{"早安", "早哇", "早上好", "ohayo", "哦哈哟", "お早う", "早好", "早", "早早早"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
@@ -187,7 +187,7 @@ func init() { // 插件主体
 	engine.OnKeywordGroup([]string{"好吗", "是吗", "行不行", "能不能", "可不可以"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			if rand.Intn(2) == 0 {
-				ctx.SendChain(dgtr.randImage("YES1.png", "YES2.png", "NO1.jpg", "NO2.jpg"))
+				ctx.SendChain(dgtr.randImage("YES1.jpg", "YES2.jpg", "NO1.jpg", "NO2.jpg"))
 			}
 		})
 	engine.OnKeywordGroup([]string{"啊这", "AZ", "az"}).SetBlock(true).
@@ -199,6 +199,150 @@ func init() { // 插件主体
 	engine.OnKeywordGroup([]string{"我好了", "准备好了", "准备完成", "准备出发", "好了", "出发"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			ctx.SendChain(dgtr.randRecord("Aris_Formation_In_2.ogg", "Aris_Formation_Select.ogg", "Aris_Formation_In_1.ogg", "Formation_In_1.ogg", "Formation_In_2.ogg", "Formation_Select.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"哪里", "你在哪里"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Battle_In_1.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"邦邦卡邦", "邦邦卡邦！"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("EventShop_Buy_1.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"打", "攻击", "敲", "敲脑袋", "敲头", "拍", "拍屁股", "拍脑袋", "打", "打屁股", "打屁屁", "抽打"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Battle_Damage_1.ogg", "Battle_Damage_2.ogg", "Battle_Damage_3.ogg", "Aris_Battle_Damage_1.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"受伤", "伤害", "hit", "疼", "好痛"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Battle_Damage_1.ogg", "Aris_Battle_Damage_2.ogg", "Aris_Battle_Damage_3.ogg", "Battle_Damage_1.ogg", "Battle_Damage_2.ogg", "Battle_Damage_3.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"启动！", "启动", "碧蓝档案", "碧蓝档案，启动！", "碧蓝档案，启动", "ba，启动！", "BA，启动！", "原神"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("bluearchive1.ogg", "bluearchive2.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"光"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Battle_In_2.ogg", "Aris_ExSkill_Level_1.ogg", "ExSkill_Level_1.ogg", "ExSkill_Level_3.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"生日快乐", "生日快乐！", "生日"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Season_Birthday_Player.ogg", "Aris_Season_Birthday.ogg", "Season_Birthday_Player.ogg", "Season_Birthday.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"新年快乐", "新年快乐！", "元旦快乐", "元旦快乐！", "新年", "元旦", "春节"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Season_NewYear.ogg", "Aris_Season_NewYear.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"万圣节", "不给糖就捣蛋"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Season_Halloween.ogg", "Season_Halloween.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"圣诞节", "Christmas"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Season_Halloween.ogg", "Season_Halloween.ogg"))
+		})
+	engine.OnKeywordGroup([]string{"聊天", "唠嗑", "陪我", "随机语音", "语音"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("MemorialLobby_1_1.ogg",
+						      "MemorialLobby_1_2.ogg",
+						      "MemorialLobby_2_1.ogg",
+						      "MemorialLobby_2_2.ogg",
+						      "MemorialLobby_3_1.ogg",
+						      "MemorialLobby_3_2.ogg",
+						      "MemorialLobby_4_1.ogg",
+						      "MemorialLobby_4_2.ogg",
+						      "MemorialLobby_5.ogg",
+						      "Aris_MemorialLobby_1.ogg",
+						      "Aris_MemorialLobby_2_1.ogg",
+						      "Aris_MemorialLobby_2_2.ogg",
+						      "Aris_MemorialLobby_3_1.ogg",
+						      "Aris_MemorialLobby_3_2.ogg",
+						      "Aris_MemorialLobby_4_1.ogg",
+						      "Aris_MemorialLobby_4_2.ogg",
+						      "Aris_MemorialLobby_5_2.ogg",
+						      "Aris_MemorialLobby_5_2.ogg",
+						      "Aris_Lobby_1.ogg",
+						      "Aris_Lobby_2.ogg",
+						      "Aris_Lobby_3.ogg",
+						      "Aris_Lobby_4.ogg",
+						      "Aris_Lobby_5.ogg",
+						      "Lobby_1.ogg",
+						      "Lobby_2.ogg",
+						      "Lobby_3.ogg",
+						      "Lobby_4.ogg",
+						      "Lobby_5.ogg",
+						      "Cafe_monolog_1.ogg",
+						      "Cafe_monolog_2.ogg",
+						      "Cafe_monolog_3.ogg",
+						      "Cafe_monolog_4.ogg",
+						      "Cafe_monolog_5.ogg",
+						      "Aris_Cafe_Act_1.ogg",
+						      "Aris_Cafe_Act_2.ogg",
+						      "Aris_Cafe_Act_3.ogg",
+						      "Aris_Cafe_Act_4.ogg",
+						      "Aris_Cafe_Act_5.ogg",
+						      "Aris_ExWeapon_Get.ogg",
+						      "ExWeapon_Get.ogg",
+						      "Gachaget.ogg",
+						      "Aris_Gachaget.ogg",
+						      "EventLobby_1.ogg",
+						      "EventLobby_2.ogg",
+						      "EventLobby_3.ogg",
+						      "EventLobby_4.ogg",
+						      "EventLogin_1.ogg",
+						      "EventLogin_2.ogg",
+						      "EventShop_1.ogg",
+						      "EventShop_2.ogg",
+						      "EventShop_Buy_1.ogg",
+						      "EventShop_Buy_2.ogg",
+						      "EventShop_Buy_3.ogg",
+						      "EventShop_Buy_4.ogg",
+						      "EventShop_End.ogg",
+						      "EventShop_Login_1.ogg",
+						      "EventShop_Login_2.ogg",
+						      "Growup_1.ogg",
+						      "Growup_2.ogg",
+						      "Growup_3.ogg",
+						      "Growup_4.ogg",
+						      "Aris_LogIn_1.ogg",
+						      "Aris_LogIn_2.ogg",
+						      "LogIn_1.ogg",
+						      "LogIn_2.ogg",
+						      "Aris_Growup_1.ogg",
+						      "Aris_Growup_2.ogg",
+						      "Aris_Growup_3.ogg",
+						      "Aris_Growup_4.ogg",
+						      "Aris_Relationship_Up_1.ogg",
+						      "Aris_Relationship_Up_2.ogg",
+						      "Aris_Relationship_Up_3.ogg",
+						      "Aris_Relationship_Up_4.ogg",
+						      "Relationship_Up_1.ogg",
+						      "Relationship_Up_2.ogg",
+						      "Relationship_Up_3.ogg",
+						      "Relationship_Up_4.ogg",
+						      "Cafe_monolog_5.ogg",
+			))
+		})
+	engine.OnKeywordGroup([]string{"光！", "光よ", "光よ！", "开炮！", "开炮"}).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+			ctx.SendChain(dgtr.randRecord("Aris_Battle_In_2.ogg",
+						      "Aris_ExSkill_Level_1.ogg",
+						      "Aris_ExSkill_1.ogg",
+						      "Aris_ExSkill_2.ogg",
+						      "Aris_ExSkill_3.ogg",
+						      "Aris_ExSkill_Level_2.ogg",
+						      "Aris_ExSkill_Level_3.ogg",
+						      "Aris_Battle_TSA_1.ogg",
+						      "Aris_Battle_TSA_2.ogg",
+						      "ExSkill_Level_1.ogg",
+						      "ExSkill_Level_2.ogg",
+						      "ExSkill_Level_3.ogg",
+						      "Aris_Battle_Shout_1.ogg",
+						      "Aris_Battle_Shout_2.ogg",
+						      "Aris_Battle_Shout_3.ogg",
+						      "Battle_Shout_1.ogg",
+						      "Battle_Shout_2.ogg",
+						      "Battle_Shout_3.ogg",
+			))
 		})
 	engine.OnFullMatchGroup([]string{"？", "?", "¿", "离谱"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
