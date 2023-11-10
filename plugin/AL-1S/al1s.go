@@ -57,7 +57,6 @@ func init() { // 插件主体
 			ctx.SendChain(message.Text("Zzz……Zzz……"))
 		},
 	})
-	engine.UsePreHandler(isAtriSleeping)
 	var dgtr datagetter = engine.GetLazyData
 	engine.OnFullMatch("萝卜子").SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
@@ -187,13 +186,13 @@ func init() { // 插件主体
 	engine.OnKeywordGroup([]string{"好吗", "是吗", "行不行", "能不能", "可不可以"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			if rand.Intn(2) == 0 {
-				ctx.SendChain(dgtr.randImage("YES1.png", "YES2.png", "NO1.jpg", "NO2.jpg"))
+				ctx.SendChain(dgtr.randImage("YES1.png", "YES2.png", "NO1.png", "NO2.png"))
 			}
 		})
 	engine.OnKeywordGroup([]string{"啊这", "AZ", "az"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
 			if rand.Intn(2) == 0 {
-				ctx.SendChain(dgtr.randImage("AZ.jpg", "AZ1.jpg"))
+				ctx.SendChain(dgtr.randImage("AZ.png", "AZ1.png"))
 			}
 		})
 	engine.OnKeywordGroup([]string{"我好了", "准备好了", "准备完成", "准备出发", "好了", "出发"}).SetBlock(true).
@@ -206,7 +205,7 @@ func init() { // 插件主体
 			case 0:
 				ctx.SendChain(randText("?", "？", "嗯？", "(。´・ω・)ん?", "ん？"))
 			case 1, 2:
-				ctx.SendChain(dgtr.randImage("WH1.jpg", "WH2.jpg"))
+				ctx.SendChain(dgtr.randImage("WH1.png", "WH2.png"))
 			}
 		})
 	engine.OnKeyword("答应我", zero.OnlyToMe).SetBlock(true).
