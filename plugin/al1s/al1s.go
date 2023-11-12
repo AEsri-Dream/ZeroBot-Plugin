@@ -212,6 +212,7 @@ func init() { // 插件主体
 				ctx.SendChain(dgtr.randImage("K1.jpg", "K2.jpg", "K3.jpg", "K4.jpg"))
 			case 1:
 				ctx.SendChain(dgtr.randRecord("Battle_Damage_1.ogg", "Battle_Damage_2.ogg", "Battle_Damage_3.ogg", "Aris_Battle_Damage_1.ogg"))	
+			}
 		})
 	engine.OnKeywordGroup([]string{"启动！", "启动", "碧蓝档案", "碧蓝档案，启动！", "碧蓝档案，启动", "ba，启动！", "BA，启动！", "原神"}).SetBlock(true).
 		Handle(func(ctx *zero.Ctx) {
