@@ -39,7 +39,7 @@ func randText(text ...string) message.MessageSegment {
 }
 
 
-func init() { // 插件主体
+func init() {// 插件主体
 	engine := control.AutoRegister(&ctrl.Options[*zero.Ctx]{
 		DisableOnDefault: false,
 		Brief:            "AL-1S人格文本回复",
